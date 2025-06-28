@@ -15,11 +15,18 @@ function App() {
   ];
 
   return (
+    <div className="flex">
     <Dropdown
       options={options}
       value={selection}
       onChange={handleSelection}
     />
+     <Dropdown
+      options={options}
+      value={selection}
+      onChange={handleSelection}
+    />
+    </div>
   );
 }
 
