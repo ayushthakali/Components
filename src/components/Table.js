@@ -1,27 +1,33 @@
-function Table({ data }) {
-  const renderedRows = data.map(fruit=>{
-     return(
-      <tr className="border-b" key={fruit.name}>
-        <td className="p-3">{fruit.name}</td>
-        <td className="p-3">{fruit.color}</td>
-        <td className="p-3">{fruit.score}</td>
-      </tr>
-     )
-  })
-  
+import { Fragment } from "react";
 
-  return <table className="table-auto border-spacing-2">
+function Table({ data, config, keyFn }) {
+  const renderedheaders = config.map((column) => {
+    if (column.header) {
+      return <Fragment key={column.label}>{column.header()}</Fragment>;
+    }
+    return <th key={column.label}>{column.label}</th>;
+  });
+
+  const renderedRows = data.map((rowData) => {
+    const renderedCells = config.map((column) => {
+      return <td key={column.label}>{column.render(rowData)}</td>;
+    });
+
+    return (
+      <tr className="border-b" key={keyFn(rowData)}>
+        {renderedCells}
+      </tr>
+    );
+  });
+
+  return (
+    <table className="table-auto border-spacing-2">
       <thead>
-        <tr className="border-b-2">
-          <th>Fruit</th>
-          <th>Color</th>
-          <th>Score</th>
-        </tr>
+        <tr className="border-b-2">{renderedheaders}</tr>
       </thead>
-      <tbody>
-        {renderedRows}
-      </tbody>
-  </table>;
+      <tbody>{renderedRows}</tbody>
+    </table>
+  );
 }
 
 export default Table;
