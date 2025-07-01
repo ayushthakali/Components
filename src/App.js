@@ -28,7 +28,7 @@ function App() {
         </Route>
 
          <Route path="/table">
-          <ModalPage />
+          <TablePage />
         </Route>
       </div>
     </div>
