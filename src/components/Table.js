@@ -21,9 +21,9 @@ function Table({ data, config, keyFn }) {
   });
 
   return (
-    <table className="table-auto border-spacing-2">
+    <table className="table-auto border-separate border-spacing-2">
       <thead>
-        <tr className="border-b-2">{renderedheaders}</tr>
+        <tr className="border border-b-2">{renderedheaders}</tr>
       </thead>
       <tbody>{renderedRows}</tbody>
     </table>
