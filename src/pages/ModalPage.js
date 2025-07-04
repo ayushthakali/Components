@@ -35,10 +35,10 @@ function ModalPage() {
       </Button>
       {showModal && modal}
       <p>
-        Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit
-        amet, consectetur, adipisci velit..." "There is no one who loves pain
+        Lorem Ipsum &quot; Neque porro quisquam est qui dolorem ipsum quia dolor sit
+        amet, consectetur, adipisci velit...&quot;  &quot; There is no one who loves pain
         itself, who seeks after it and wants to have it, simply because it is
-        pain..." Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+        pain...&quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
         id elit suscipit, porta mi eu, faucibus augue. Duis dignissim id dolor
         id vehicula. Cras est elit, porta ac vestibulum sed, iaculis et mauris.
         In tempor dui nisi, et accumsan enim tincidunt quis. Aenean tellus eros,
